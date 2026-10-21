@@ -39,8 +39,7 @@ Releases follow [semver](https://semver.org) and are tagged `vX.Y.Z`.
 A prerelease version (`x.y.z-rc.1`) is published under the npm dist-tag `next`, and its GitHub
 release is marked as a prerelease.
 
-The workflow needs two repository settings (Settings → Secrets and variables → Actions):
-
-- The secret `NPM_TOKEN`: an npm access token that can publish `gbaudio`.
-- The variable `NPM_PUBLISH`, set to `true`. Until it is, the workflow runs
-  `npm publish --dry-run` and creates no GitHub release.
+Publishing uses npm trusted publishing: the package's npm settings trust this repository's
+`release.yml`, so the workflow needs no token, secret or variable, and npm adds provenance on its
+own. It requires npm 11.5.1 or later, which the workflow checks. A version npm already has is
+skipped, so re-running a release only redoes what failed.

@@ -51,8 +51,6 @@ Use Node 24 or later and the pnpm version in `packageManager`.
 
 Never bump the version or write release changelog sections by hand: `pnpm release:version
 <x.y.z>` does it, commits and creates the tag `vX.Y.Z` (`--dry-run` first), and pushing the tag
-(`git push origin main vX.Y.Z`) publishes through `.github/workflows/release.yml`. The first
-release (1.0.0) is already in package.json and CHANGELOG.md, so the command only tags it.
-Details, and the `NPM_TOKEN` secret and `NPM_PUBLISH` variable the workflow needs, are in
-CONTRIBUTING.md. The tarball holds only `dist/`, README.md, LICENSE and package.json (check
+(`git push origin main vX.Y.Z`) publishes through `.github/workflows/release.yml`, with npm
+trusted publishing (no token). Details are in CONTRIBUTING.md. The tarball holds only `dist/`, README.md, LICENSE and package.json (check
 with `npm pack --dry-run`). Tagging, pushing and publishing need the maintainer's approval.
