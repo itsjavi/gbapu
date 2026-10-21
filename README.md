@@ -147,6 +147,10 @@ program types a channel can carry (`PulseDriverProgram`, `EffectDriverProgram`,
 `NoiseDriverProgram`, `WaveDriverProgram`, `MusicPulseDriverProgram`, `NoiseSampleBank`,
 `WaveSampleBank`), which the renderer does not use.
 
+## Contributing
+
+Development and releases are described in [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Credits
 
 The APU emulation is a TypeScript port of [gbapu](https://github.com/stoneface86/gbapu) by
