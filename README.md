@@ -1,9 +1,9 @@
-# gbapu
+# gbaudio
 
 A Game Boy APU (DMG sound) emulator and audio compiler in TypeScript. The emulation is a port of
 [stoneface's gbapu](https://github.com/stoneface86/gbapu) (C++); see [Credits](#credits).
 
-Describe a sound as a stream of Game Boy sound register writes and waits, and gbapu compiles it
+Describe a sound as a stream of Game Boy sound register writes and waits, and gbaudio compiles it
 into a timeline, runs it through an emulation of the four DMG sound channels (two pulse channels,
 the wave channel and the noise channel) and renders stereo PCM offline, ready to play with the Web
 Audio API or to save as a WAV file.
@@ -15,7 +15,7 @@ Audio API or to save as a WAV file.
 ## Install
 
 ```sh
-npm install gbapu
+npm install gbaudio
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ import {
   encodeInterleavedStereoPcm16Wav,
   renderEngineAudioToPcm,
   type EngineAudioData,
-} from 'gbapu'
+} from 'gbaudio'
 
 // Half a second of A4 (440 Hz) on pulse channel 1.
 const beep: EngineAudioData = {

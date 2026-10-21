@@ -1,4 +1,4 @@
-// `pnpm release:version <x.y.z> [--dry-run]`: releases gbapu. On a clean `main` working tree it runs
+// `pnpm release:version <x.y.z> [--dry-run]`: releases gbaudio. On a clean `main` working tree it runs
 // `pnpm check`, sets package.json's version, prepends the release's section to CHANGELOG.md from
 // the Conventional Commits since the last `v*` tag, commits `chore(release): vX.Y.Z` and creates
 // the annotated tag vX.Y.Z. It pushes nothing: pushing the tag runs .github/workflows/release.yml.

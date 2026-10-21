@@ -41,6 +41,6 @@ release is marked as a prerelease.
 
 The workflow needs two repository settings (Settings → Secrets and variables → Actions):
 
-- The secret `NPM_TOKEN`: an npm access token that can publish `gbapu`.
+- The secret `NPM_TOKEN`: an npm access token that can publish `gbaudio`.
 - The variable `NPM_PUBLISH`, set to `true`. Until it is, the workflow runs
   `npm publish --dry-run` and creates no GitHub release.

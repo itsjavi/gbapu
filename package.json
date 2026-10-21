@@ -1,5 +1,5 @@
 {
-  "name": "gbapu",
+  "name": "gbaudio",
   "version": "1.0.0",
   "description": "Game Boy APU (DMG sound) emulator and audio compiler in TypeScript: a port of stoneface86/gbapu, plus a compiler for register command streams, offline PCM rendering and WAV export.",
   "keywords": [

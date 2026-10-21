@@ -1,7 +1,7 @@
 # Agent instructions
 
-gbapu is a Game Boy APU (DMG sound) emulator and audio compiler in TypeScript, published to npm
-as `gbapu`. It has no runtime dependencies and must keep running in browsers, Web Workers and
+gbaudio is a Game Boy APU (DMG sound) emulator and audio compiler in TypeScript, published to npm
+as `gbaudio` from the `itsjavi/gbapu` repository. It has no runtime dependencies and must keep running in browsers, Web Workers and
 Node: no Node APIs in `src/`.
 
 ## Commands
