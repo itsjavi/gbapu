@@ -24,7 +24,7 @@ SOFTWARE.
 
 Third-party notice
 
-The APU emulation (src/gbapu.ts, dist/gbapu.js) is a TypeScript port of gbapu,
+The APU emulation (src/apu.ts, dist/apu.js) is a TypeScript port of gbapu,
 a Game Boy APU emulator in C++ by stoneface (https://github.com/stoneface86/gbapu),
 used under the following license:
 

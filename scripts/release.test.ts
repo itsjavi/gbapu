@@ -29,11 +29,11 @@ const version = (repo: string) =>
 
 const CHANGELOG = '# Changelog\n\n## 1.0.0\n\nFirst release.\n'
 
-/** A scratch repository like gbapu before its first release: 1.0.0 written by hand, no tag. */
+/** A scratch repository like gbaudio before its first release: 1.0.0 written by hand, no tag. */
 function fixture(): string {
-  const repo = mkdtempSync(join(tmpdir(), 'gbapu-release-'))
+  const repo = mkdtempSync(join(tmpdir(), 'gbaudio-release-'))
   temps.push(repo)
-  writeFileSync(join(repo, 'package.json'), '{\n  "name": "gbapu",\n  "version": "1.0.0"\n}\n')
+  writeFileSync(join(repo, 'package.json'), '{\n  "name": "gbaudio",\n  "version": "1.0.0"\n}\n')
   writeFileSync(join(repo, 'CHANGELOG.md'), CHANGELOG)
   git(repo, 'init', '-q', '-b', 'main')
   git(repo, 'config', 'user.name', 'Test')
@@ -41,7 +41,7 @@ function fixture(): string {
   git(repo, 'config', 'commit.gpgsign', 'false')
   git(repo, 'config', 'tag.gpgsign', 'false')
   git(repo, 'add', '-A')
-  git(repo, 'commit', '-q', '-m', 'feat: gbapu 1.0.0')
+  git(repo, 'commit', '-q', '-m', 'feat: gbaudio 1.0.0')
   return repo
 }
 
@@ -121,7 +121,7 @@ describe('helpers', () => {
   })
 
   it('sets the package.json version, keeping its formatting', () => {
-    const text = '{\n  "name": "gbapu",\n  "version": "1.0.0",\n  "x": { "version": "1" }\n}\n'
+    const text = '{\n  "name": "gbaudio",\n  "version": "1.0.0",\n  "x": { "version": "1" }\n}\n'
     assert.equal(setPackageVersion(text, '1.1.0'), text.replace('"1.0.0"', '"1.1.0"'))
   })
 })
@@ -182,7 +182,7 @@ describe('release', () => {
     assert.match(output, /dry run: 1\.0\.0 -> 1\.1\.0/)
     assert.match(output, /## 1\.1\.0 \(2026-10-21\)/)
     assert.match(output, /- \*\*compiler:\*\* loop points \(\w+\)/)
-    assert.doesNotMatch(output, /update deps|gbapu 1\.0\.0/)
+    assert.doesNotMatch(output, /update deps|gbaudio 1\.0\.0/)
     assert.deepEqual(dry.checks, [])
     assert.equal(version(repo), '1.0.0')
     assert.equal(git(repo, 'rev-parse', 'HEAD'), head)

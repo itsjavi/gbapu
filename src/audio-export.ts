@@ -1,5 +1,5 @@
 import { compileEngineAudio, type CompiledEngineAudioChannelTimeline } from './audio-compiler.ts'
-import { APU_REG, Apu } from './gbapu.ts'
+import { APU_REG, Apu } from './apu.ts'
 import type { EngineAudioData } from './types.ts'
 
 const CPU_CYCLES_PER_SECOND = 4_194_304

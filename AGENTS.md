@@ -19,7 +19,7 @@ Use Node 24 or later and the pnpm version in `packageManager`.
 
 ## Layout
 
-- `src/gbapu.ts`: the APU emulation (`Apu`, `APU_REG`, `MIX_MODE`), a port of stoneface's C++
+- `src/apu.ts`: the APU emulation (`Apu`, `APU_REG`, `MIX_MODE`), a port of stoneface's C++
   gbapu.
 - `src/audio-compiler.ts`: command streams to cycle-timed register writes.
 - `src/audio-export.ts`: offline rendering to PCM and WAV.
@@ -32,7 +32,7 @@ Use Node 24 or later and the pnpm version in `packageManager`.
 
 ## Conventions
 
-- The engine modules (`src/gbapu.ts`, `src/audio-*.ts`, `src/types.ts`): change them only for a
+- The engine modules (`src/apu.ts`, `src/audio-*.ts`, `src/types.ts`): change them only for a
   real fix or feature, with a test.
 - All code follows `.oxfmtrc.json`: single quotes, no semicolons, 100 columns.
 - Relative imports use `.ts` extensions; the build rewrites them to `.js`.
