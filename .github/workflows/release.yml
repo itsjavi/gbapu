@@ -55,6 +55,13 @@ jobs:
           NPM_PUBLISH: ${{ vars.NPM_PUBLISH }}
           TAG: ${{ github.ref_name }}
         run: |
+          # A version npm already has (published by hand, or a re-run) is skipped, so the GitHub
+          # release still follows.
+          version="${TAG#v}"
+          if npm view "gbaudio@$version" version >/dev/null 2>&1; then
+            echo "gbaudio@$version is already on npm: nothing to publish."
+            exit 0
+          fi
           flags=(--provenance --access public)
           if [[ "$TAG" == *-* ]]; then flags+=(--tag next); fi
           if [[ "$NPM_PUBLISH" != "true" ]]; then flags+=(--dry-run); fi

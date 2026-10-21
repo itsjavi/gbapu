@@ -13,15 +13,15 @@
     "synthesizer",
     "wav"
   ],
-  "homepage": "https://github.com/itsjavi/gbapu#readme",
+  "homepage": "https://github.com/itsjavi/gbaudio#readme",
   "bugs": {
-    "url": "https://github.com/itsjavi/gbapu/issues"
+    "url": "https://github.com/itsjavi/gbaudio/issues"
   },
   "license": "MIT",
   "author": "Javi Aguilar",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itsjavi/gbapu.git"
+    "url": "git+https://github.com/itsjavi/gbaudio.git"
   },
   "files": [
     "dist",
