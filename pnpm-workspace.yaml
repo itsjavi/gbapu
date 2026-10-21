@@ -1,0 +1,4 @@
+# A single package; pnpm reads its settings from this file.
+allowBuilds:
+  # Vite's esbuild (through Vitest): the platform binary comes as an optional dependency.
+  esbuild: false

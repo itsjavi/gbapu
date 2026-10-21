@@ -1,0 +1,16 @@
+{
+  // Emits JavaScript and declarations to dist/, rewriting relative `.ts` imports to `.js`.
+  // The library needs no Node types: it runs in browsers, workers and Node alike.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "rewriteRelativeImportExtensions": true,
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "types": []
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts"]
+}

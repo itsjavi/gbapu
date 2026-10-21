@@ -1,0 +1,6 @@
+{
+  "singleQuote": true,
+  "semi": false,
+  "printWidth": 100,
+  "ignorePatterns": ["node_modules/", "dist/", "coverage/", ".local/"]
+}
