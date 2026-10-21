@@ -44,11 +44,13 @@
     "typecheck": "tsc -p tsconfig.json",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:scripts": "node --test \"scripts/*.test.ts\"",
     "lint": "oxlint",
     "fmt": "oxfmt .",
     "fmt:check": "oxfmt --check .",
-    "check": "pnpm typecheck && pnpm lint && pnpm fmt:check && pnpm test && pnpm build",
-    "prepack": "pnpm build"
+    "check": "pnpm typecheck && pnpm lint && pnpm fmt:check && pnpm test && pnpm test:scripts && pnpm build",
+    "prepack": "pnpm build",
+    "release:version": "node scripts/release.ts"
   },
   "devDependencies": {
     "@types/node": "24.19.1",
