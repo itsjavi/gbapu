@@ -39,11 +39,12 @@ jobs:
 
       - name: Check that npm supports trusted publishing (11.5.1 or later)
         run: |
-          node -e '
-            const [major, minor, patch] = process.argv[1].split(".").map(Number);
-            const ok = major > 11 || (major === 11 && (minor > 5 || (minor === 5 && patch >= 1)));
-            if (!ok) { console.error(`npm ${process.argv[1]} is too old for trusted publishing.`); process.exit(1); }
-          ' "$(npm --version)"
+          version="$(npm --version)"
+          if [[ "$(printf '%s\n' 11.5.1 "$version" | sort -V | head -n 1)" != "11.5.1" ]]; then
+            echo "::error::npm $version is too old for trusted publishing (11.5.1 or later)."
+            exit 1
+          fi
+          echo "npm $version"
 
       - name: Check that the tag is v + package.json's version
         env:
