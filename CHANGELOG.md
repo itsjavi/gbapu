@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 (2026-10-21)
+
+No user-facing changes.
+
 ## 1.0.0
 
 First release.
